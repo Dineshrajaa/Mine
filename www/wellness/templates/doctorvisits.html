@@ -1,0 +1,98 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+
+
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+
+ <ion-nav-title class="bg-color">Doctor Visits</ion-nav-title>
+ <ion-content>
+ <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="saveVisits()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+ <div class="" >
+   <div class="">
+    
+
+
+<label class="item item-input">
+    <span class="input-label">Date</span>
+    <input type="date" placeholder="" ng-model="visits.date">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Subject Matter</span>
+    <input type="text" placeholder="Please enter subject matter" ng-model="visits.subjectmatter">
+  </label> <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && visits.subjectmatter==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+     <label class="item item-input">
+    <span class="input-label">Provider</span>
+    <input type="text" placeholder="Please enter provider" ng-model="visits.provider">
+  </label> <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && visits.provider==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+     <label class="item item-input">
+    <span class="input-label">Care Facility</span>
+    <input type="text" placeholder="Please enter care facility" ng-model="visits.carefacility">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Summary</span>
+    <input type="text" placeholder="summary details" ng-model="visits.summary">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">@Biometry</span>
+    <input type="text" placeholder="biometry details" ng-model="visits.biometry">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">@Tests</span>
+    <input type="text" placeholder="test details" ng-model="visits.tests">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">@Current Condition</span>
+    <input type="text" placeholder="current condition details" ng-model="visits.currentcondition">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">@drugs</span>
+    <input type="text" placeholder="drugs details" ng-model="visits.drugs">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">@documents</span>
+    <input type="text" placeholder="documents details" ng-model="visits.documents">
+  </label>
+       <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Private Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="visits.comments"></textarea></div>
+ 
+  </label>
+ </div>
+</div>
+
+
+
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
+

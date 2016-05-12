@@ -1,0 +1,44 @@
+<ion-view style="background-image: url('./img/bg.png');">
+
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+
+    </ion-nav-bar>
+    <ion-nav-title class="bg-color">Documents</ion-nav-title>
+ <ion-content>
+ <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="addMedical()"></button></div><br><br><br>
+ <div class="" >
+   <div class="">
+    <!-- <div class="button button-icon icon ion-ios-plus-outline iconRight" ng-click="addMedical()"></div> -->
+
+	<center>
+  <span style="color:white;font-weight:bold">Scan Document</span><br>
+<button class="button" ng-click="TakePhoto()"><img ng-src="img/camera.png" height="80px"></button>
+</center>
+  </div>
+ 
+    </div>
+</div>
+
+
+<div class="paddContent"> 
+	<div class="item item-divider" style="background-color:#387ef5;color:white">
+    Sort Document List By Name & Type
+  </div>
+ <div class="item "
+		ng-repeat="docs in docsList" ng-click="itemClick(docs)" href="#" >
+		<div class="item-icon-right">
+
+<!--			<div class="col">{{docs.title}}</div>-->
+            <div class="col"><img ng-src={{docs.document}} width="80px" height="80px"></div>
+			
+		</div>
+		</div>
+	</div>
+</div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view style="background-image: url('./img/bg.png');">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-title class="bg-color">Calendar</ion-nav-title>
+    <ion-content>
+        <onezone-datepicker datepicker-object="onezoneDatepicker">
+            <!-- <button class="button button-block button-outline button-positive show-onezone-datepicker">
+                {{onezoneDatepicker.date | date:'dd MMMM yyyy'}}
+            </button> -->
+        </onezone-datepicker>
+        <div class="button-bar">
+            <a class="button">Events</a>
+            <a class="button">Reminders</a>            
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,52 @@
+<ion-view>
+
+
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+ <ion-nav-title class="bg-color">Medical History</ion-nav-title>
+  <ion-content class="padding paddContent">
+    <h2 style="text-align:center;font-size:20px"></h2>
+
+    <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+<div style="float:right"><button class="button button-icon icon ion-plus-circled positive " ng-click="addMedicalRecord()"></button></div><br><br><br>
+
+
+<ion-list 
+          can-swipe="false">
+  <ion-item ng-repeat="menuItems in menuItemsList" ng-click="edit(menuItems.name,menuItems.mhid)">
+
+  
+    <h2>{{menuItems.name}}</h2>
+
+    <ion-option-button class="button-positive"
+                       ng-click="edit(menuItems.name,menuItems.mhid)">
+      Edit
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="delete(menuItems.mhid)">
+      Delete
+    </ion-option-button>
+    <i
+
+  </ion-item>
+</ion-list>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+    </ion-content>
+
+
+</ion-view>

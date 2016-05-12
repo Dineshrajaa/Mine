@@ -1,0 +1,70 @@
+<ion-view class="loginBackground" view-title="Landing" style="background-image: url('./img/bg.png');">
+   <ion-nav-view name="menu-view"></ion-nav-view>
+   <ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 style="color:white !important">Menu</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/allergieslist">
+          Allergies
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/vaccineslist">
+          Vaccines
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/medicalHistorylist">
+         Medical History
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/sociallist">
+         Social History
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/drugslist">
+         Drugs
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/surgerieslist">
+         Past Surgeries
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/doctorvisitlist">
+         Doctor Visits
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/biometry">
+         Ongoing Biometry
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/currentconditions">
+         Current Conditions
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/medicaltests">
+         Medical Tests
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/adminData">
+         Admin Data
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/events">
+         Event
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/reminder">
+         Reminder
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/notes">
+         Notes
+        </ion-item>
+        <ion-item nav-clear menu-close href="#">
+         Calendar
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/aboutUs">
+         About Us
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+</ion-view>

@@ -1,0 +1,92 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+
+<ion-nav-buttons side="right">
+      <!-- <button class="button bar-calm" ng-click="saveMedicalRecord()">save</button> -->
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+
+ <ion-nav-title class="bg-color">Medical History</ion-nav-title>
+  
+
+   <ion-content>
+
+   <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="saveMedicalRecord()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+    
+ <div class="" >
+   <div class="">
+  
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="medicalRecord.name">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && medicalRecord.name==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+
+     <label class="item item-input item-select">
+    <div class="input-label">
+     Type
+    </div>
+    <select ng-model="medicalRecord.type">
+      <option selected>Familial</option>
+      <option >Medical</option>
+       <option >Gynecological</option>
+        <option >Trauma</option>
+         <option >Work</option>
+          <option >Other</option>
+    </select>
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Start Date</span>
+    <input type="date" placeholder="" ng-model="medicalRecord.startdate">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">End Date</span>
+    <input type="date" placeholder="" ng-model="medicalRecord.enddate">
+  </label>
+
+
+       <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="medicalRecord.comments"></textarea></div>
+  
+  </label>
+
+
+ </div>
+</div>
+
+
+
+
+
+
+</ion-content>
+
+
+
+  
+
+   
+   
+  
+ 
+
+
+
+
+</ion-view>
+

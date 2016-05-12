@@ -1,0 +1,56 @@
+<ion-view style="background-image: url('./img/bg.png');">
+
+
+<ion-nav-bar class="bar-positive">
+
+
+<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-plus-circled " ng-click=" addProfile()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+ <ion-nav-title class="bg-color">Manage Profiles</ion-nav-title>
+
+
+   
+    <ion-content class="padding">
+        <h2 style="text-align:center;font-size:20px"></h2>
+        <div ng-repeat="profile in profiles">
+            <div class="row" ng-if="$even">
+                <div class="col col-50 ">
+                <div class="profilePad borderClass {{profiles[$index].color}}">
+                    <center><figure><img ng-src="{{profiles[$index].picture}}" width="80px" height="80px" ng-click="loadProfile(profiles[$index])" on-hold="onHold(profiles[$index])">
+                        <figcaption class="caption">{{profiles[$index].firstname}}</figcaption>
+                        <div ng-show="profiles[$index].editItem" class="row profileManageBtn">
+                           <div class="col"><button class="button button-balanced" ng-click="editProfile(profiles[$index])">
+ edit   
+</button></div>
+                                 <div class="col"><button class="button button-assertive" ng-click="deleteProfile(profiles[$index])">
+  delete
+</button></div>
+                       </div>
+
+                    </figure>
+                    </center>
+                    </div>
+                </div>
+                <div class="col col-50" ng-show="profiles[$index+1].emailid!=undefined">
+                <div class="profilePad borderClass {{profiles[$index+1].color}}">
+                    <center><figure ><img ng-src="{{profiles[$index+1].picture}}" width="80px" height="80px" ng-click="loadProfile(profiles[$index+1])" on-hold="onHold(profiles[$index+1])">
+                        <figcaption class="caption">{{profiles[$index+1].firstname}}</figcaption>
+                           <div ng-show="profiles[$index+1].editItem" class="row profileManageBtn">
+                                <div class="col"><button class="button button-balanced" ng-click="editProfile(profiles[$index+1])">
+ edit   
+</button></div>
+                                 <div class="col"><button class="button button-assertive" ng-click="deleteProfile(profiles[$index+1])">
+  delete
+</button></div>
+                       </div>
+                    </figure>
+                    </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+ 
+</ion-view>

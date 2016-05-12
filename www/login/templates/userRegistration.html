@@ -1,0 +1,22 @@
+<ion-view style="background-image: url('./img/bg.png');">
+    <ion-nav-title class="bg-color"> User Registration</ion-nav-title>
+    <ion-content>
+   <div class="list">
+<div class="paddContent" style="margin-top:100px;">
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Enter name" ng-model="userRegistration.firstName">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Email Id</span>
+    <input type="text" placeholder="Enter email id" ng-model="userRegistration.emailId">
+  </label><br>
+
+  <button class="button button-block button-calm" ng-click="createuser()">
+  Create
+ </button>
+</div>
+</div>
+</ion-content>
+</ion-view>

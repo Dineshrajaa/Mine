@@ -1,0 +1,185 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+    <ion-nav-buttons side="right">
+        <button class="button icon-left ion-document-text button-positive" ng-click="saveprofile()"> Save</button>
+    </ion-nav-buttons>
+    </ion-nav-bar>
+    
+ <ion-nav-title class="bg-color">Profile</ion-nav-title>
+  <ion-content class="padding">
+
+    <h2 style="text-align:center;font-size:20px"></h2>
+   <div class="list paddContent" >
+   <center>
+   <button class="button button-positive" ng-click="contacts()">
+  Import From Contacts
+</button></center>
+  <label class="item item-input">
+    <span class="input-label">First Name</span>
+    <input type="text" placeholder="enter First name" ng-model="profile.firstname">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Last Name</span>
+    <input type="text" placeholder="enter Last name" ng-model="profile.lastname">
+  </label>
+
+
+
+  <label class="item item-input">
+   <span class="input-label">Profile Picture</span>
+   <div class="profilePadInside borderClass {{profile.color}}">
+                    <center><figure ><img ng-src="{{profile.picture}}" width="80px" height="80px" ng-click="loadProfile(profiles[$index+1])" on-hold="onHold(profiles[$index+1])">
+</figure>
+                    </center>
+                    </div>
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Birth Date</span>
+    <input type="date" ng-model="profile.dob">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Birth Place</span>
+    <input type="text" placeholder="enter birth place" ng-model="profile.pob">
+  </label>
+
+     <label class="item item-input item-select">
+    <div class="input-label">
+     Gender
+    </div>
+    <select>
+      <option selected>Male</option>
+      <option >Female</option>
+    </select>
+  </label>
+
+   <label class="item item-input item-select">
+    <div class="input-label">
+    Blood Group
+    </div>
+    <select>
+      <option selected>A+</option>
+      <option >B+</option>
+      <option >AB+</option>
+      <option >AB-</option>
+      <option >O+</option>
+    </select>
+  </label>
+
+   <label class="item item-input item-select">
+    <div class="input-label">
+    Marital Status
+    </div>
+    <select>
+      <option selected>Married</option>
+      <option >UnMarried</option>
+    </select>
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Number of kids</span>
+    <input type="text" placeholder="enter number of kids" ng-model="profile.noofkids">
+  </label>
+
+   <label class="item item-input item-select">
+    <div class="input-label">
+  Organ Donor
+    </div>
+    <select>
+      <option selected>Yes</option>
+      <option >No</option>
+    </select>
+  </label>
+
+
+   <label class="item item-input">
+    <span class="input-label">Language</span>
+    <input type="text" placeholder="enter language" ng-model="profile.language">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Address</span>
+   <div style="width:65%"><textarea rows="4" placeholder="enter address " ng-model="profile.address"></textarea></div>
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">City</span>
+    <input type="text" placeholder="enter city" ng-model="profile.city">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">State</span>
+    <input type="text" placeholder="enter state" ng-model="profile.state">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Zip</span>
+    <input type="number" placeholder="enter zip code" ng-model="profile.zip">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Phone</span>
+    <input type="text" placeholder="enter landline number" ng-model="profile.phone">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Cell Phone</span>
+    <input type="text" placeholder="enter cell phone nuber" ng-model="profile.cellphone">
+  </label>
+
+ <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="enter email" ng-model="profile.emailid">
+  </label>
+ 
+
+
+       <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="enter comments" ng-model="profile.comments"></textarea></div>&nbsp;&nbsp;
+  
+  </label>
+
+<br>
+<center>
+<button class="button button-positive" ng-click="addemp()">
+  Add Employment Details
+</button>
+
+</center>
+
+<div class="item"
+    ng-repeat="employmentdetail in employers"
+    ng-click="showDetails(employmentdetail)" >
+
+      <div class="col">Employer Name: {{employmentdetail.employername}}</div>
+
+      <div class="col ion-android-calendar">
+        <span class="icon_space">{{employmentdetail.startdate |
+          date:'yyyy-MM-dd'}}</span>
+      </div>
+       <div class="col ion-android-calendar">
+        <span class="icon_space">{{employmentdetail.enddate |
+          date:'yyyy-MM-dd'}}</span>
+      </div>
+      <i class="icon stable mac-40-icon-height"
+        ng-class="request.showDetails ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+    </div>
+
+  
+
+   
+   
+  
+  </div>
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
+

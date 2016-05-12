@@ -1,0 +1,107 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+    
+  </ion-nav-bar>
+
+ <ion-nav-title class="bg-color">Insurance</ion-nav-title>
+ <ion-content>
+ <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="saveInsurance()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+ <div class="" >
+   <div class="">
+   
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="enter first name" ng-model="insurance.name">
+  </label>
+ 
+
+   <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Address</span>
+   <div style="width:65%"><textarea rows="4" placeholder="enter address " ng-model="insurance.address"></textarea></div>
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">City</span>
+    <input type="text" placeholder="enter city" ng-model="insurance.city">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">State</span>
+    <input type="text" placeholder="enter state" ng-model="insurance.state">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Zip</span>
+    <input type="number" placeholder="enter zip code" ng-model="insurance.zip">
+  </label>
+
+ <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="enter email" ng-model="insurance.email">
+  </label>
+     <label class="item item-input">
+    <span class="input-label">Phone</span>
+    <input type="text" placeholder="enter landline number" ng-model="insurance.phone">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Cell Phone</span>
+    <input type="text" placeholder="enter cell phone nuber" ng-model="insurance.cellphone">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Group Id</span>
+    <input type="text" placeholder="Enter Group Id" ng-model="insurance.groupid">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Insurance Id</span>
+    <input type="text" placeholder="Enter insurance Id" ng-model="insurance.insuranceid">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Start Date</span>
+    <input type="date" placeholder="enter start date" ng-model="insurance.startdate">
+     
+    </label>
+
+   <label class="item item-input">
+    <span class="input-label">End Date</span>
+    <input type="date" placeholder="enter end date" ng-model="insurance.enddate">
+     
+    </label>
+
+
+       <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:40%"><textarea rows="4" placeholder="enter comments" ng-model="insurance.comments"></textarea></div>
+  </label>
+
+
+
+
+
+
+  </div>
+
+   
+   
+  
+  </div>
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
+

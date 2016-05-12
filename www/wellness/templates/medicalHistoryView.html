@@ -1,0 +1,105 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+ <ion-nav-title class="bg-color">Medical History</ion-nav-title>
+  
+
+    <ion-content>
+ <div class="boxContent" >
+   <div class="inputItems">
+      <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable item-icon-right"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="'ion-plus'"></i>
+            &nbsp;
+             {{group.name}}
+
+     <label class="toggle toggle-assertive" style="float:right">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            
+            <label class="item item-input">
+              <span class="input-label">{{currDate | date:'dd/MM/yyyy'}}</span>
+              <input type="text" placeholder="Descriptions">
+              <button class="button bar-calm" style="margin-right:15px;" ng-click="allergy()">save</button>
+            </label>
+          </ion-item>
+        </div>
+      </ion-list>
+</div>
+</div>
+    </ion-content>
+
+
+
+
+
+<!--
+   <ion-content>
+ <div class="boxContent" >
+   <div class="inputItems">
+  
+  <label class="item item-input">
+    <span class="input-label">Diabetes</span>
+    <span> </span>
+  </label>
+
+
+     <label class="item item-input">
+    <div class="input-label">
+     Kidney Problem
+    </div>
+ 
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Neuropathy</span>
+   
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Retinopathy</span>
+
+  </label>
+
+
+       <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Other Diabetes</span>
+
+  
+  </label>
+
+
+ </div>
+</div>
+
+
+
+
+
+
+</ion-content>
+
+-->
+
+  
+
+   
+   
+  
+ 
+
+
+
+
+</ion-view>
+

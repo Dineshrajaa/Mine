@@ -1,0 +1,144 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+ <ion-nav-title class="bg-color">Ongoing Biometry Log</ion-nav-title>
+   <ion-content>
+   <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="addBioMetery()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+
+ <div class="" >
+   <div class="">
+    <!-- <div class="button button-icon icon ion-ios-plus-outline iconRight" ng-click="addBioMetery()"></div> -->
+  
+
+  <label class="item item-input">
+    <span class="input-label">Weight</span>
+    <input type="text" placeholder="Please enter weight"  ng-model="biometery.BMIweight">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Height</span>
+    <input type="text" placeholder="Please enter height"  ng-model="biometery.BMIheight">
+   
+  </label>
+
+<label class="item item-input">
+   <div style="margin-left:35px;">
+    <button class="button icon-right  button-calm" ng-click="caculateBMI()" >Calculate BMI</button>
+ 
+    <!-- <a class="button icon-right  button-calm"  ng-click="caculateBMI()">Calculate BMI</a>-->
+  </div>
+  <p style="margin-left:35px;">
+            <input ng-model="BMIValue" ng-readonly="true"/>
+        </p>
+<!--   <label class="item item-input" style="margin-left:35px;border:1px solid red;" ng-model="BMIValue"> </label> -->
+  <!-- <input type="text" placeholder="enter text..." ng-model="biometery.BMIValue" ng-readonly="true"> -->
+  <!-- <input type="text" ng-model="biometery.BMIValue">  -->
+</label>
+
+    
+
+
+  <label class="item item-input">
+    <span class="input-label">Waist</span>
+    <input type="text" placeholder="Please enter waist" ng-model="biometery.WHRwaist">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Hips</span>
+    <input type="text" placeholder="Please enter hip size" ng-model="biometery.WHRhip">
+   
+  </label>
+
+<label class="item item-input">
+   <div style="margin-left:35px;"> <button class="button icon-right  button-calm" ng-click="caculateWHR()">Calculate WHR</button>
+    <!-- <a class="button icon-right  button-calm"  ng-click="caculateWHR()">Calculate WHR</a> -->
+  </div>
+   <p style="margin-left:35px;">
+            <input ng-model="WHRValue" ng-readonly="true"/>
+        </p>
+</label>
+
+
+  <label class="item item-input">
+    <span class="input-label">Height</span>
+    <input type="text" placeholder="Please enter height" ng-model="biometery.BAIheight">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Hips</span>
+    <input type="text" placeholder="Please enter hip size" ng-model="biometery.BAIhip">
+   
+  </label>
+
+<label class="item item-input">
+   <div style="margin-left:35px;">
+    <button class="button icon-right  button-calm" ng-click="caculateBAI()">Calculate BAI</button>
+    <!-- <a class="button icon-right  button-calm"  ng-click="caculateBAI()">Calculate BAI</a> -->
+  </div>
+    <p style="margin-left:35px;">
+            <input ng-model="BAIValue" ng-readonly="true"/>
+        </p>
+</label>
+
+ <h2 style="text-align:center;font-size:18px;color:white;background-color:#387ef5;padding:10px">Psycological Parameters</h2>
+ 
+<label class="item item-input">
+    <span class="input-label">Systolic</span>
+    <input type="text" placeholder="Please enter systolic" ng-model="biometeryForm.systolic">
+  </label> <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && biometeryForm.systolic==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+  <label class="item item-input">
+    <span class="input-label">Diastolic</span>
+    <input type="text" placeholder="Please enter diastolic" ng-model="biometeryForm.diastolic">
+  </label> <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && biometeryForm.diastolic==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+  <label class="item item-input">
+    <span class="input-label">Temperature</span>
+    <input type="text" placeholder="Please enter temperature" ng-model="biometeryForm.temperature">
+  </label> <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && biometeryForm.temperature==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+    <h2 style="text-align:center;font-size:18px;color:white;background-color:#387ef5;padding:10px">Heart Rate Pulse</h2>
+
+<label class="item item-input">
+    <span class="input-label">Extrasystole</span>
+    <input type="text" placeholder="Please enter extrasystolic" ng-model="biometeryForm.extrasystolic">
+  </label> <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && biometeryForm.extrasystolic==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+  <label class="item item-input">
+    <span class="input-label">Irregular Normal</span>
+    <input type="text" placeholder="Please enter irregular normal value" ng-model="biometeryForm.irregularvalue">
+  </label> <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && biometeryForm.irregularvalue==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+</div>
+
+    </div>
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
+

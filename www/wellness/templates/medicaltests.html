@@ -1,0 +1,329 @@
+<ion-view>
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+<ion-nav-title class="bg-color">{{title}}</ion-nav-title>
+
+<ion-tabs class="tabs-positive tabs-icon-top" >
+
+
+
+  <ion-tab title="Blood" icon-on="ion-waterdrop" icon-off="ion-waterdrop" on-select="changeTitle('blood')">
+
+
+
+
+   <ion-content style="background-image: url('./img/bg.png');">
+   <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-plus-circled positive" ng-click="saveBlood()" ng-hide="IsSave"></button><button class="button icon ion-checkmark-circled positive" ng-click="updateBlood()" ng-hide="IsDone"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+
+   <!-- <button class="button button-positive float" ng-click="saveBlood()" ng-hide="IsSave">save</button>
+      <button class="button button-positive float" ng-click="updateBlood()" ng-hide="IsDone" >Done</button><br><br><br> -->
+ <div class="" >
+   <div class="">
+
+    
+  
+
+<ul class="list">
+
+  <li class="item item-toggle">
+     Glycated Hemoglobin
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" ng-model="blood.hemoglobin">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+  <li>
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="blood.name">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="BloodsaveBtnClicked && blood.name==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+  <label class="item item-input">
+    <span class="input-label">Date</span>
+    <input type="date" placeholder="" ng-model="blood.date">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Results</span>
+    <input type="text" placeholder="Please enter results" ng-model="blood.results">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="BloodsaveBtnClicked && blood.results==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+<label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="blood.comments"></textarea></div>&nbsp;&nbsp;
+  
+  </label>
+
+
+ 
+
+  </li>
+
+
+  <li class="item item-toggle">
+     Glucose
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" ng-model="blood.glucose">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+
+
+  <li class="item item-toggle">
+    Prostate-specific antigen
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" ng-model="blood.antigen">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+
+  <li class="item item-toggle">
+     Cholesterol
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" ng-model="blood.cholesterol">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+
+  </ul>
+
+ </div>
+
+
+</div>
+
+<div class="paddingContent"> 
+  <div class="item item-divider" style="background-color:#387ef5;color:white">
+    List of Blood Tests
+  </div>
+<ion-nav-title class="bg-color"></ion-nav-title>
+    <h2 style="text-align:center;font-size:20px"></h2>
+
+ <ion-list 
+          can-swipe="false">
+  <ion-item ng-repeat="blood in bloodItems" ng-click="editBlood(blood.bloodid)">
+
+  
+    <h2>{{blood.name}}</h2>
+
+    <ion-option-button class="button-positive"
+                       ng-click="editBlood(blood.bloodid)">
+      Edit
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="deleteBlood(blood.bloodid)">
+      Delete
+    </ion-option-button>
+
+  </ion-item>
+</ion-list>
+
+  </div>
+ 
+</ion-content>
+  </ion-tab>
+
+
+  <ion-tab title="Medical"  icon-on="ion-medkit" icon-off="ion-medkit" on-select="changeTitle('medical')">
+   
+ <ion-nav-title class="bg-color">Medical Tests</ion-nav-title>
+  <ion-content style="background-image: url('./img/bg.png');" >
+  <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+  <div class="btns"><button class="button icon ion-plus-circled positive" ng-click="saveMedicalTest()" ng-hide="IsSave1"></button><button class="button icon ion-checkmark-circled positive" ng-click="updateMedicalTest()" ng-hide="IsDone1"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+
+
+  <!-- <button class="button button-positive float" ng-click="saveMedicalTest()" ng-hide="IsSave1">save</button>
+      <button class="button button-positive float" ng-click="updateMedicalTest()" ng-hide="IsDone1" >Done</button><br><br><br> -->
+
+ <div class="" >
+   <div class="">
+    
+  
+ <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="medicalTestFormItems.name">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="MedicalsaveBtnClicked && medicalTestFormItems.name==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+ 
+ <label class="item item-input item-select">
+    <div class="input-label">
+ Type
+    </div>
+    <select  ng-model="medicalTestFormItems.medicalTesttype">
+      <option selected>Type 1</option>
+      <option >Type 2</option>
+    </select>
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Date</span>
+    <input type="date" placeholder="" ng-model="medicalTestFormItems.medicalTestDate">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Reason</span>
+    <input type="text" placeholder="Please enter reason" ng-model="medicalTestFormItems.medicalTestReason">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="MedicalsaveBtnClicked && medicalTestFormItems.medicalTestReason==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+<label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="medicalTestFormItems.mediclTestComment"></textarea></div>&nbsp;&nbsp;
+  
+  </label>
+
+
+ 
+</div>
+
+
+
+ </div>
+
+ <div class="paddingContent"> 
+  <div class="item item-divider" style="background-color:#387ef5;color:white">
+    List of Medical Tests
+  </div>
+<ion-nav-title class="bg-color"></ion-nav-title>
+    <h2 style="text-align:center;font-size:20px"></h2>
+<ion-list 
+          can-swipe="false">
+  <ion-item ng-repeat="items in medicalTestListItems" ng-click="medicalEdit(items.medicalID)">
+
+  
+    <h2>{{items.name}}</h2>
+
+    <ion-option-button class="button-positive"
+                       ng-click="medicalEdit(items.medicalID)">
+      Edit
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="medicalDelete(items.medicalID)">
+      Delete
+    </ion-option-button>
+
+  </ion-item>
+</ion-list>
+</div>
+</ion-content>
+
+  </ion-tab>
+
+
+
+
+  <ion-tab title="BioSignal" icon-on="ion-ios-pulse" icon-off="ion-ios-pulse" on-select="changeTitle('biosignal')">
+   <ion-nav-title class="bg-color">Biosignal</ion-nav-title>
+  <ion-content style="background-image: url('./img/bg.png');">
+<center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+<div class="btns"><button class="button icon ion-plus-circled positive" ng-click="saveBioSignal()" ng-hide="IsSave2"></button><button class="button icon ion-checkmark-circled positive" ng-click="updateBioSignal()" ng-hide="IsDone2"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+
+
+ <!-- <button class="button button-positive float" ng-click="saveBioSignal()" ng-hide="IsSave2">save</button>
+      <button class="button button-positive float" ng-click="updateBioSignal()" ng-hide="IsDone2" >Done</button><br><br><br> -->
+ <div class="" >
+   <div class="">
+    
+  
+  
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="bioSignalFormItems.name">
+  </label>
+ 
+ <label class="item item-input item-select">
+    <div class="input-label">
+ Type
+    </div>
+    <select>
+      <option selected>Type 1</option>
+      <option >Type 2</option>
+    </select>
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Date</span>
+    <input type="date" placeholder="" ng-model="bioSignalFormItems.bioSignalDate">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Reason</span>
+    <input type="text" placeholder="Please enter reason" ng-model="bioSignalFormItems.bioSignalReason">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Result</span>
+    <input type="text" placeholder="Please enter result" ng-model="bioSignalFormItems.bioSignalResult">
+  </label>
+
+<label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="bioSignalFormItems.bioSignalComment"></textarea></div>&nbsp;&nbsp;
+  
+  </label>
+
+
+ </div>
+
+ </div>
+
+ <div class="paddingContent"> 
+  <div class="item item-divider" style="background-color:#387ef5;color:white">
+    List of Biosignal Tests
+  </div>
+<ion-nav-title class="bg-color"></ion-nav-title>
+    <h2 style="text-align:center;font-size:20px"></h2>
+ <ion-list 
+          can-swipe="false">
+  <ion-item ng-repeat="items in bioSignalListItems" ng-click="bioSignalEdit(items.bioSignalID)">
+
+  
+    <h2>{{items.name}}</h2>
+
+    <ion-option-button class="button-positive"
+                       ng-click="bioSignalEdit(items.bioSignalID)">
+      Edit
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="bioSignalDelete(items.bioSignalID)">
+      Delete
+    </ion-option-button>
+
+  </ion-item>
+</ion-list>
+</div>
+</ion-content>
+  </ion-tab>
+
+</ion-tabs>
+
+
+</ion-view>
+

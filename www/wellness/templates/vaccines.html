@@ -1,0 +1,88 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+
+<ion-nav-buttons side="right">
+      <!-- <button class="button bar-calm" ng-click="saveAllergy()">save</button> -->
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+
+
+ <ion-nav-title class="bg-color">Vaccines</ion-nav-title>
+
+ 
+
+  <ion-content>
+
+  <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="saveVaccine()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+
+ <div class="" >
+   <div class="">
+  
+  
+
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="vaccines.name">
+  </label>
+  <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && vaccines.name==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+  <label class="item item-input">
+    <span class="input-label" >Date</span>
+    <input type="date" ng-model="vaccines.vaccinedate">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Type</span>
+    <input type="text" placeholder="Please enter type" ng-model="vaccines.type">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Group</span>
+    <input type="text" placeholder="Please enter group" ng-model="vaccines.vaccinegroup">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Refreshed Date</span>
+    <input type="date" placeholder="" ng-model="vaccines.refdate">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Quantity</span>
+    <input type="text" placeholder="Please enter quantity" ng-model="vaccines.quantity">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && vaccines.quantity==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+ <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:40%"><textarea rows="4" placeholder="Please enter comments" ng-model="vaccines.comments"></textarea></div>
+  </label>
+
+ </div>
+</div>
+
+
+
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
+

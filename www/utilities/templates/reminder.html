@@ -1,0 +1,92 @@
+<ion-view style="background-image: url('./img/bg.png');">
+
+<ion-nav-bar class="bar-positive">
+     <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <ion-nav-title class="bg-color">Reminder</ion-nav-title>
+    <ion-content>
+   <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+   <div class="btns"><button class="button icon ion-plus-circled positive" ng-click="saveReminder()" ng-hide="IsSave"></button><button class="button icon ion-checkmark-circled positive" ng-click="updateReminder()" ng-hide="IsDone"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+
+   <!-- <button class="button button-positive float" ng-click="saveReminder()" ng-hide="IsSave">save</button>
+      <button class="button button-positive float" ng-click="updateReminder()" ng-hide="IsDone" >Done</button><br><br><br> -->
+      
+<div class="" >
+   <div class="">
+	<!-- <a class="button button-icon icon ion-ios-plus-outline iconRight"></a> -->
+
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Enter name" ng-model="remindersForm.name">
+  </label>
+
+
+ <label class="item item-input item-select">
+    <div class="input-label">
+     Type
+    </div>
+    <select ng-model="remindersForm.remindertype">
+      <option selected>Type 1 </option>
+      <option >Type 2</option>
+    </select>
+  </label>
+
+   <label class="item item-input item-select">
+    <div class="input-label">
+   Frequency
+    </div>
+    <select ng-model="remindersForm.reminderFrequency">
+      <option selected>Frequency 1 </option>
+      <option >Frequency 2</option>
+    </select>
+  </label>
+   <label class="item item-input item-select">
+    <div class="input-label">
+ Priority
+    </div>
+    <select ng-model="remindersForm.reminderPriority">
+      <option selected>Priority 1 </option>
+      <option >Priority 2</option>
+    </select>
+  </label>
+
+
+  </div>
+ 
+    </div>
+</div>
+
+
+<div class="paddContent"> 
+  <div class="item item-divider" style="background-color:#387ef5;color:white">
+    List of upcoming Reminders
+  </div>
+<ion-nav-title class="bg-color"></ion-nav-title>
+    <h2 style="text-align:center;font-size:20px"></h2>
+
+ <ion-list 
+          can-swipe="false">
+  <ion-item ng-repeat="reminders in reminders"  ng-click="edit(reminders.reminderid)">
+
+  
+    <h2>{{reminders.name}}</h2>
+
+    <ion-option-button class="button-positive"
+                       ng-click="edit(reminders.reminderid)">
+      Edit
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="delete(reminders.reminderid)">
+      Delete
+    </ion-option-button>
+
+  </ion-item>
+</ion-list>
+
+  </div>
+    </ion-content>
+</ion-view>

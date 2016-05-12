@@ -1,0 +1,127 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+ </ion-nav-bar>
+
+ <ion-nav-title class="bg-color">Past Surgeries</ion-nav-title>
+ <ion-content>
+ <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="saveSurgery()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+ <div class="" >
+   <div class="">
+    <!-- <div class="button button-icon icon ion-ios-plus-outline iconRight" ng-click="saveSurgery()"></div> -->
+<!-- name TEXT,date TEXT,result TEXT,hospital TEXT,provider TEXT,comments TEXT,stayname TEXT,stayDate TEXT,stayreason TEXT,stayresult TEXT,stayhospital TEXT,staycomments TEXT -->
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="surgeries.name">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && surgeries.name==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+    <label class="item item-input">
+    <span class="input-label">Date</span>
+    <input type="date" placeholder="" ng-model="surgeries.date">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Results</span>
+    <input type="text" placeholder="Please enter results" ng-model="surgeries.result">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && surgeries.result==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+   <label class="item item-input">
+    <span class="input-label">Hospital</span>
+    <input type="text" placeholder="Please enter hospital" ng-model="surgeries.hospital">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && surgeries.hospital==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+  <label class="item item-input">
+    <span class="input-label">Provider</span>
+    <input type="text" placeholder="Please enter provider details" ng-model="surgeries.provider">
+  </label>
+
+
+       <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="surgeries.comments"></textarea></div>&nbsp;&nbsp;
+ 
+  </label>
+
+
+
+<h2 style="text-align:center;font-size:18px;color:white;background-color:#387ef5;padding:10px">Hospital Stay</h2>
+
+<label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="surgeries.stayname">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && surgeries.stayname==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+    <label class="item item-input">
+    <span class="input-label">Date</span>
+    <input type="date" placeholder="" ng-model="surgeries.stayDate">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Reason</span>
+    <input type="text" placeholder="Please enter reason" ng-model="surgeries.stayreason">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Results</span>
+    <input type="text" placeholder="Please enter results" ng-model="surgeries.stayresult">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && surgeries.stayresult==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+   <label class="item item-input">
+    <span class="input-label">Hospital</span>
+    <input type="text" placeholder="Please enter hospital" ng-model="surgeries.stayhospital">
+  </label><div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && surgeries.stayhospital==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+    <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Duration Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="surgeries.staycomments"></textarea></div>
+ 
+  </label>
+  
+
+  
+  </div>
+</div>
+
+
+
+
+
+
+</ion-content>
+
+
+
+
+
+</ion-view>
+

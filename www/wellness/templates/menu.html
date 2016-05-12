@@ -1,0 +1,86 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-positive" align-title="left">
+      <!-- <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button> -->
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable" style="background-color:white">
+     <h1 class="head-title">Menu</h1>
+    </header>
+    <!-- <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/menu/allergieslist">
+          Allergies
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/vaccineslist">
+          Vaccines
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/medicalHistorylist">
+         Medical History
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/sociallist">
+         Social History
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/drugslist">
+         Drugs
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/surgerieslist">
+         Past Surgeries
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/doctorvisitlist">
+         Doctor Visits
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/biometry">
+         Ongoing Biometry
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/currentconditions">
+         Current Conditions
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/medicaltests">
+         Medical Tests
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/adminData">
+         Admin Data
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/events">
+         Event
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/reminder">
+         Reminder
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/notes">
+         Notes
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/menu/aboutUs">
+         About Us
+        </ion-item>
+      </ion-list>
+    </ion-content> -->
+
+    <ion-content >
+    <h2 style="text-align:center;font-size:20px"></h2>
+
+<!--  <div class="item "
+        ng-repeat="menuItems in menuItemsList" ng-click="itemClick(menuItems)" href="#" >
+ <div class="row">
+            <div class="col-50"><span class="icon_space"> {{menuItems.name}}</span>
+            </div>
+            
+    </div>
+
+        
+        </div> -->
+
+        <ul class="list list-position">
+    <li class="item list-font" nav-clear menu-close ng-repeat="menuItems in menuItemsList" ng-click="itemClick(menuItems)" href="#">
+      {{menuItems.name}}
+    </li>
+</ul>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

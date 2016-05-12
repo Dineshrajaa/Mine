@@ -1,0 +1,161 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+
+<ion-nav-buttons side="right">
+      <!-- <button class="button bar-calm" ng-click="saveHistory()">save</button> -->
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+ <ion-nav-title class="bg-color">Social History</ion-nav-title>
+
+   <ion-content>
+
+    <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="saveHistory()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+    
+ <div class="" >
+   <div class="">
+    <!-- <div class="button button-icon icon ion-ios-plus-outline iconRight" ng-click="saveHistory()"></div> -->
+  
+<!-- tobbacoUse,packsPerDay,numberOfYears,yearsQuit,alcoholUse,ReDrugUse,tatoos,bloodTransfusion,spDiet,reExcercise,sexTransmitted,crCondition,startDate,endDate,comments,emailid) -->
+<ul class="list">
+
+  <li class="item item-toggle">
+     Tobacco Use
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" ng-model="social.tobbacoUse" ng-change="toggleTobbacoChange()">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+  <li>
+  <label class="item item-input">
+    <span class="input-label">Packs Per Day</span>
+    <input type="text" placeholder="Please enter packs per day" ng-model="social.packsPerDay">
+  </label>
+  <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && social.packsPerDay==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+  <label class="item item-input">
+    <span class="input-label">Number Of Years</span>
+    <input type="text" placeholder="Please enter number of years" ng-model="social.numberOfYears">
+  </label>
+  <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && social.numberOfYears==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+    <label class="item item-input">
+    <span class="input-label">Years-Quit</span>
+    <input type="text" placeholder="Please enter years-quit" ng-model="social.yearsQuit">
+  </label>
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+     Alcohol Use
+    </div>
+    <select ng-model="social.alcoholUse">
+      <option selected>1</option>
+      <option >2</option>
+       <option >3</option>
+    </select>
+  </label>
+
+   <label class="item item-input item-select">
+    <div class="input-label">
+   Recreational Drug Use
+    </div>
+    <select ng-model="social.ReDrugUse">
+      <option selected>1</option>
+      <option >2</option>
+       <option >3</option>
+    </select>
+  </label>
+
+  </li>
+
+   <li class="item item-toggle">
+     Tatoos
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" ng-model="social.tatoos" ng-change="toggleTottosChange()">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+  <li>
+<label class="item item-input">
+    <span class="input-label">Blood Transfusion</span>
+    <input type="text" placeholder="Please enter Reason/Year" ng-model="social.bloodTransfusion">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Special Diet</span>
+    <input type="text" placeholder="Please enter special diet details" ng-model="social.spDiet">
+  </label>
+
+    <label class="item item-input">
+    <span class="input-label">Regular Exercise</span>
+    <input type="text" placeholder="Please enter Times per week/minutes per workout" ng-model="social.reExcercise">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Sexually Transmitted</span>
+    <input type="text" placeholder="Please enter details" ng-model="social.sexTransmitted">
+  </label>
+
+     <label class="item item-input">
+    <span class="input-label">Current Conditions</span>
+    <input type="text" placeholder="Please enter name" ng-model="social.crCondition">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Start Date</span>
+    <input type="date" placeholder="" ng-model="social.startDate">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">End Date</span>
+    <input type="date" placeholder="" ng-model="social.endDate">
+  </label>
+
+
+       <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:65%"><textarea rows="4" placeholder="Please enter comments" ng-model="social.comments"></textarea></div>
+  </label>
+  </li>
+
+
+
+
+</ul>
+
+
+ </div>
+</div>
+
+
+
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
+

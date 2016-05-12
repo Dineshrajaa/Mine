@@ -1,0 +1,94 @@
+
+<ion-view style="background-image: url('./img/bg.png');">
+
+<ion-nav-bar class="bar-positive">
+
+<ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left bar-calm" ng-click="GoBack()">Back</button>
+    </ion-nav-buttons>
+
+<ion-nav-buttons side="right">
+      <!-- <button class="button bar-calm" ng-click="saveAllergy()">save</button> -->
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+
+
+ <ion-nav-title class="bg-color">Allergies</ion-nav-title>
+    <ion-content>
+    <center><img ng-src="img/logo.jpg" style="width:50%;height:auto"></center>
+    <div class="btns"><button class="button icon ion-document-text positive" ng-click="saveAllergy()"></button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="button icon ion-trash-b positive" ng-click="showConfirm()"></button></div><br><br><br>
+ <div class="" >
+ <div class="">
+ 
+
+  
+
+
+
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Please enter name" ng-model="allergies.name">
+  </label>
+  <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && allergies.name==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+  <label class="item item-input">
+    <span class="input-label">Results</span>
+    <input type="text" placeholder="Please enter results" ng-model="allergies.result">
+  </label>
+    <div class="error-container assertive ng-inactive ng-hide" ng-show="saveBtnClicked && allergies.result==''">
+                    <div class="error">
+                        <i class="ion-information-circled"></i> This field is required!
+                    </div>
+                </div>
+
+  <label class="item item-input">
+    <span class="input-label">Severity</span>
+    <input type="text" placeholder="Please enter severity" ng-model="allergies.severity">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Start</span>
+    <input type="date" placeholder="" ng-model="allergies.startdate">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">End</span>
+    <input type="date" placeholder="" ng-model="allergies.enddate">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Symptoms</span>
+    <input type="text" placeholder="Please enter symptoms" ng-model="allergies.symptoms">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Prescribe Drugs</span>
+    <input type="text" placeholder="" ng-model="allergies.priscribeddrug">
+  </label>
+ 
+ <label class="item item-input">
+    <span class="input-label" style="white-space:normal !important">Comments</span>
+   <div style="width:40%"><textarea rows="4" placeholder="Please enter comments" ng-model="allergies.comments"></textarea></div>
+  </label>
+
+
+ 
+    </div>
+</div>
+
+
+
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
+

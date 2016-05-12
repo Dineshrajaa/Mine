@@ -1,0 +1,346 @@
+/*mywellness*/
+.profilePad{
+  padding:12%;
+}
+.profilePadInside{
+   padding:2%;
+}
+
+.screenBg{
+background-image: url('../img/bg.jpg');
+background-size:100%;
+ background-repeat: no-repeat;
+ background-position:center;
+
+
+}
+
+.screenLogo1{
+    background-color: white;
+    background-image: url('../img/logo.jpg');
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 70%;
+    height:90px;
+
+ }
+
+.formBg1 {
+  /*position: absolute;*/
+ 
+  width:100%;
+background: rgba(46, 33, 32,0.5);
+height:483px;
+
+  padding: 5%;
+ }
+
+.screenLogo{
+    background-color: white;
+    background-image: url('../img/logo.jpg');
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 70%;
+    height:90px;
+ }
+
+
+/* Empty. Add your own CSS if you like */
+    .profileMargin{
+      margin-left: 12%;
+    }
+    .profileManageBtn{
+      margin-left: -24%;
+    }
+
+.formBg{
+  position: absolute; 
+    margin-top: 22%;
+    width: 100%;
+    background: rgba(46, 33, 32,0.5);
+    height: 180px;
+    padding: 5%
+}
+
+.aboutUsContent{
+padding:2%;
+width: 98%
+}
+.aboutUsJust{
+   
+   text-align: justify;
+   margin-left:15%;   
+    height: 80px;
+    overflow: hidden;
+
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.color0{background-color:white;}
+.color1{background-color:red;}
+.color2{background-color:blue;}
+.color3{background-color:yellow;}
+.color4{background-color:green;}
+.color5{background-color:orange;}
+
+
+.borderClass{
+    border:5px solid #FFFFFF;
+}
+
+.Allergies, .Vaccines, .Medical,.Social,.Drugs,.Past,.Doctor,.Ongoing,.Current,.Admin,.Event,.Reminder,.Notes,.About {
+  background-image: url('../img/iconSet.png');
+  background-repeat: no-repeat;
+}
+.bar-stable .button.button-icon {
+    border-color: transparent;
+    background-color: white;
+}
+.Allergies {
+    height: 32px;
+    width: 32px;
+      flex: 0 0 11%;
+   background-position: -272px -473px;}
+
+.Vaccines {
+ height: 32px;
+    width: 32px;
+      flex: 0 0 11%;
+   background-position: -384px -528px;
+}
+
+.Medical {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+ background-position: -329px -249px;
+
+}
+.Social {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+ background-position: -497px -25px;
+
+}
+.Drugs {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+background-position: -272px -25px;
+
+}
+.Past{
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+    background-position: -104px -306px;
+
+}
+.Doctor {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+    background-position: -217px -529px;
+
+}
+.Ongoing {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+    background-position: -273px -583px;
+
+}
+.Current {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+    background-position: -385px -249px;
+
+}
+.Admin {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+    background-position: -552px -251px;
+
+
+}
+.Event {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+    background-position: -552px -304px;
+
+}
+.Reminder {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+     background-position: -496px -471px;
+
+
+}
+.Notes {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+    background-position: -159px -250px;
+
+}
+.About  {
+ height: 32px;
+ width: 32px;
+   flex: 0 0 11%;
+ background-position: -48px -138px;
+
+
+}
+.icon_space{
+margin-left: 52px;
+}
+
+
+.bar.bar-stable{
+background: rgba(47, 59, 65, 0.88);
+color:white !important;
+}
+.bar-stable .button.button-clear{
+
+	color: white !important;
+}
+.bg-color{
+color:white !important;
+font-weight: bolder;
+	}
+
+.logo{
+	    padding-top: 5%;
+    margin-left: 10%;
+}
+
+.scroll-content{
+	background: url('./img/bg.png');
+}
+
+.paddContent{
+	    padding: 5%;
+	
+}
+.paddingContent
+{
+  padding: 2%;
+}
+
+
+.iconRight{
+	float: right;
+}
+
+.boxContent{
+	 margin: 5%;
+
+background-color: grey;
+border: 1px solid white;
+border-radius: 5px;
+
+
+}
+.inputItems{
+	padding:1%;
+}
+.aboutUs_outline{
+	background-color: grey;
+	height:auto;
+	margin: 5%;
+	border: 1px solid white;
+    border-radius: 5px;
+}
+.fnt{
+    font-size:18px;
+    font-weight:bolder;
+    color:white;
+}
+.foo {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,.2);
+}
+.caption{
+       font-size: 16px;
+    color: blue;
+    font-weight: bold;
+    /* padding-left: 20px; */
+    text-align: center;
+    width: 80px;
+   
+   
+       
+}
+
+/*.bar-header{
+  height:50px !important;
+  
+}
+
+.bar.bar-positive .title{
+margin-top:5px !important;
+}
+*/
+.float{
+  float:right;
+}
+
+.btns{
+  float:right;
+  padding-right:15px;
+}
+
+/*.bar.bar-stable .title{
+  color: black;
+}*/
+
+.head-title{
+  color:black;
+  text-align:left;
+  font-size:20px;
+}
+.list-position{
+  margin-top: -10px;
+}
+.list-font{
+  font-size: 14px;
+}
+
+
+.button-float{
+  background: #387ef5 !important;
+  color:white !important;
+  height:42px;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  
+
+}
+
+.button-float:hover{
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+  background: darken($assertive, 10%) !important;
+}

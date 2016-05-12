@@ -1,0 +1,23 @@
+<ion-view style="background-image: url('./img/bg.png');">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+    <ion-nav-title class="bg-color">Admin Data</ion-nav-title>
+    <ion-content>
+   
+
+
+<div class=""> 
+	
+ <div class="item "
+		ng-repeat="adminData in adminDataList" ng-click="itemClick(adminData)" href="#" >
+		<div class="item-icon-right">
+
+			<div class="col">{{adminData.title}}</div>
+			
+		</div>
+		</div>
+	</div>
+    </ion-content>
+</ion-view>
